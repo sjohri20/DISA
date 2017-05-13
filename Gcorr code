@@ -1,0 +1,61 @@
+#here we will be writing the code for gCorr method
+Best of luck:)
+LET'S GET STARTED
+# yo! got it hritik! flora20 here
+#See i have written a small code based on GCorr method
+
+#no shift size
+from math import *
+s=raw_input()
+N=len(s)#window size
+Cg=0
+
+def num(stg):
+    if stg=='G':
+        return 1
+    else:
+        return -1
+
+for k in range(1,N):
+    Ck=0
+    for j in range(1,N-k):
+        
+        Ck=Ck+num(s[j-1])*num(s[j+k-1])
+        #print Ck
+    Cg=Cg+(abs(Ck)+0.0)/(N-k)
+
+print (Cg+0.0)/(N-1)
+
+#with shift size
+
+from math import *
+s=raw_input()
+ws=input()#window size
+ss=input()#shift size
+N=len(s)#length of genomic sequence
+
+def num(stg):
+    if stg=='G':
+        return 1
+    else:
+        return -1
+
+for i in range(0,N-ws+1,+ss):
+    Cg=0
+    for k in range(1,ws):
+        Ck=0
+        for j in range(1,ws-k+1):
+        
+            Ck=Ck+num(s[i+j-1])*num(s[i+j+k-1])
+
+        Cg=Cg+(abs(Ck)+0.0)/(ws-k)
+        print Cg
+
+    print ('{0} HELLO'.format((Cg+0.0)/(ws-1)))
+        
+      
+        
+
+
+
+        
