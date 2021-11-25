@@ -1,1 +1,3 @@
-COMPUTATIONAL PREDICTION OF ORIGIN OF REPLICATIOIN OF BACTERIA
+# Computational Prediction of Origin of Replication in Prokaryotes
+
+
